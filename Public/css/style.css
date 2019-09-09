@@ -1,18 +1,18 @@
 body, html {
-  padding: 0;
+  padding: 20px;
   margin: 0;
   font-family: 'Helvetica Neue', 'Calibri', Arial, sans-serif;
   height: 100%;
 }
 #app {
-  background: #263238;
+  background: #fff;
   display: flex;
   align-items: stretch;
   justify-content: stretch;
   height: 100%;
 }
 .sidebar {
-  background: #eceff1;
+  background: #fff;
   min-width: 250px;
   display: flex;
   flex-direction: column;
@@ -21,9 +21,8 @@ body, html {
 }
 .sidebar h2 {
   font-weight: normal;
-  font-size: 1.0rem;
-  background: #607d8b;
-  color: #fff;
+  font-size: 2.0rem;
+  background: #fff;
   padding: 10px;
   margin: 0;
 }

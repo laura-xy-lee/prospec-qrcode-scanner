@@ -27,7 +27,12 @@ var app = new Vue({
                 return h + ":" + m + ":" + s;
             }
             var obj = JSON.parse(content);
-            self.scans.unshift({ date: +(Date.now()), content: "[" + showTime() + "] Hello " + obj.name + "."});
+            if (obj.password == "XK`Y3$yda/<ffVt") {
+                var content = "[" + showTime() + "] Hello " + obj.name
+            } else {
+                var content = "[" + showTime() + "] Bad password"
+            }
+            self.scans.unshift({ date: +(Date.now()), content: content});
 
             // Post employee scanned data to DB
             var scanStatus = document.getElementById('scan-status');
