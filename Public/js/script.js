@@ -32,13 +32,14 @@ var app = new Vue({
             } else {
                 var content = "[" + showTime() + "] Bad password"
             }
-            self.scans.unshift({ date: +(Date.now()), content: content});
+            var datetime_now = Date.now()
+            self.scans.unshift({ date: datetime_now, content: content});
 
             // Post employee scanned data to DB
             var scanStatus = document.getElementById('scan-status');
             axios.post('/scan', {
-                timestamp: Date.now(),
-                employeeId: obj.employeeid,
+                timestamp: datetime_now,
+                employeeId: obj.name,
                 password: obj.password
             })
             .then(function (response) {
