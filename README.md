@@ -1,5 +1,7 @@
 # QR code scanner
 
+(Born out of #techforall 2019)
+
 Everytime an employee flashes his QR code to this QR code scanner, a record of his name and scan timing is sent to our database. 
 
 Each QR code should contain a json file with the following information: `password` and `name`.
